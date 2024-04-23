@@ -1,0 +1,32 @@
+{
+  "name": "pure-esm-package",
+  "description": "A minimum example of a pure ESM package",
+  "version": "0.0.0",
+  "author": "r4ai",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r4ai/pure-esm-package.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun run tsc --project tsconfig.build.json",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^16.1.3",
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  }
+}
