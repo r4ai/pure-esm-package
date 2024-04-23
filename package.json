@@ -22,7 +22,8 @@
   ],
   "scripts": {
     "build": "bun run tsc --project tsconfig.build.json",
-    "test": "bun test"
+    "test": "bun test",
+    "check": "bunx @biomejs/biome check --apply ."
   },
   "devDependencies": {
     "@tsconfig/node16": "^16.1.3",
