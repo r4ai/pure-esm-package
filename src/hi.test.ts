@@ -1,6 +1,6 @@
 import { hi } from "./hi.js"
 
-import { describe, test, expect } from "bun:test"
+import { describe, expect, test } from "bun:test"
 
 describe("Hi!", () => {
   test("Hi, Alice!", () => {
