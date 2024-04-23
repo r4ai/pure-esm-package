@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/lefthook.json
+
+pre-commit:
+  parallel: true
+  commands:
+    biome:
+      glob: "*.{js,ts,jsx,tsx,json,jsonc}"
+      run: |
+        bunx @biomejs/biome check --apply {staged_files}
+        git add {staged_files}
+
+    check-lockfile:
+      glob: "**/package.json"
+      run: bun install --frozen-lockfile
